@@ -1,0 +1,11 @@
+{
+    "name": "OR Productivity",
+    "version": "1.0.0",
+    "description": "multifaceted productivity tool",
+    "manifest_version": 3,
+    "author": "Owen Fanning",
+    "action":{
+        "default_popup": "index.html",
+        "default_title": "Testing title"
+    }
+}
