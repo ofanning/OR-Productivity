@@ -5,7 +5,7 @@
     "manifest_version": 3,
     "author": "Owen Fanning",
     "action":{
-        "default_popup": "index.html",
+        "default_popup": "Code/layouts/index.html",
         "default_title": "Testing title"
     }
 }
