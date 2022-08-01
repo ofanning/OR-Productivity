@@ -1,49 +1,18 @@
-var mySeconds;
-var intervalHandle;
+function start() {
+    var countdownTimer = setInterval('timer()', 1000);
+  }
 
-function resetPage(){
-	document.getElementById("inputArea").style.display="none";	
-	
-	
+  function timer(){
+    var hours = parseInt(document.getElementById("hours").value, 0);
+    var minutes = parseInt(document.getElementById("minutes").value, 0);
+    var seconds = parseInt(document.getElementById("seconds").value, 0);
+    var currentsec = (((hours * 3600) + (minutes * 60) + seconds));  //the current time left in seconds
+    if (currentsec > 0) {
+        //take one second away, and rerender the seconds split into d, h, m, and s in the html, which you will reuse next time timer() runs
+    } else {
+        //expired
+    }
 }
-function tick(){
-	var timeDisplay=document.getElementById("time");
-	
-	var min=Math.floor(mySeconds/60);
-	var sec=mySeconds-(min*60);
-	
-	if (sec < 10) {
-		sec="0"+sec;
-	}
-	
-	var message=min.toString()+":"+sec;
-	
-	timeDisplay.innerHTML=message;
-	
-	if(mySeconds===0){
-		alert("Done");
-		clearInterval(intervalHandle);
-		resetPage();
-	}
-	mySeconds--;
-	
-	
-}
-function startCounter(){
-	var myInput=document.getElementById("minutes").value;
-	if (isNaN(myInput)){
-		alert("Type a valid number please");
-		return;
-	}
-	mySeconds=myInput*60;
-	
-	intervalHandle=setInterval(tick, 1000);
-	
-	document.getElementById("inputArea").style.display="none";
-	
-	
-}
-
 
 window.onload=function(){
 	var myInput=document.createElement("input");
@@ -60,5 +29,4 @@ window.onload=function(){
 	}
 	document.getElementById("inputArea").appendChild(myInput);
 	document.getElementById("inputArea").appendChild(myButton);
-	
 }

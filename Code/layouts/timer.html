@@ -8,22 +8,14 @@
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <h1><span>Countdown Timer</span></h1>
-</div>
-
-<div id="canvas" class="container group">
-
-<div id="primaryContent" class="group">
-    <p>Input the time in minutes and click start</p>
-    <div id="inputArea"></div>
-    <h2 id="time">0:00</h2>
-    
-</div>
-<div id="secondaryContent">
-
-</div>
-
-</div>
+    <div id="countdowntimer">
+        <button id="Start" onclick="start();">Start Timer</button>
+        <input type="text" id="hours" value="0" /> 
+        <input type="text" id="minutes" value="0" />
+        <input type="text" id="seconds" value="0" /><br>
+        <div id="display"></div>
+        <div id="message"></div>
+      </div>
 
 <script src="timer.js"></script>
 </body>
