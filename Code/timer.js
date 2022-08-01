@@ -9,11 +9,10 @@ function start() {
     var currentsec = (((hours * 3600) + (minutes * 60) + seconds));  //the current time left in seconds
     if (currentsec > 0) {
             var final = then - date;
-            var dd = Math.floor(final/ (1000 * 60 * 60 * 24));
             var hh = Math.floor((final / (1000 * 60 * 60)) % 24);
             var mm = Math.floor((final / 1000 / 60) % 60);
             var ss = Math.floor((final / 1000) % 60);
-            document.getElementById("display").innerHTML = "Time Remaining: " + dd + "D     " + hh + "H " + mm + "M " + ss + "S";
+            document.getElementById("display").innerHTML = "Time Remaining: " + hh + "H " + mm + "M " + ss + "S";
             document.getElementById("message").innerHTML = then;
             if (final < 0) {
               clearInterval(countdownTimer);
