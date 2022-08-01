@@ -9,6 +9,70 @@
         <meta name = "viewport" content = "initial-scale=1, width=device-width">
         <title>Chrome Extension test</title>
 
+        <style>
+            /* from https://www.w3schools.com/howto/howto_css_switch.asp*/
+            .switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+        </style>
     </head>
     <body class="container-fluid m-4">
         <body style="background-color:aliceblue;"></body>
@@ -34,20 +98,20 @@
         <table class = "table">
             <tr>
                 <th>
-                    URLs to Be Blocked
+                    #
                 </th>
-                <th> # </th>
-                <th> on/off</th>
+                <th> URLs to Be Blocked </th>
+                <th> Remove </th>
             </tr>
             <tr>
                 <td class="mb-3">
                     1
                 </td>
                 <td class="mb-3">
-                    <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="url1" placeholder="youtube.com" type="text">
+                    <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="url1" placeholder="yoururl.com" type="text">
                 </td>
                 <td>
-                    <input type="checkbox" id="switch" /><label for="switch">Toggle</label>
+                    
                 </td>
             </tr>
             <tr>
@@ -55,7 +119,7 @@
                     2
                 </td>
                 <td>
-                    <input class="mb-3"></input>
+                    <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="url1" placeholder="yoururl.com" type="text">
                 </td>
                 <td>
 
@@ -67,7 +131,7 @@
                     3
                 </td>
                 <td>
-                    <input class="mb-3"></input>
+                    <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="url1" placeholder="yoururl.com" type="text">
                 </td>
                 <td>
 
@@ -80,7 +144,7 @@
                     4
                 </td>
                 <td>
-                    <input class="mb-3"></input>
+                    <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="url1" placeholder="yoururl.com" type="text">
                 </td>
                 <td>
                     
@@ -89,6 +153,11 @@
 
             </tr>
         </table>
+        <label id="blocked_button" class="switch">
+            <input type="checkbox">
+            <span class="slider round"></span>
+            Block URLS!
+        </label>
 
 
   </body>
