@@ -8,25 +8,20 @@ function start() {
     var seconds = parseInt(document.getElementById("seconds").value, 0);
     var currentsec = (((hours * 3600) + (minutes * 60) + seconds));  //the current time left in seconds
     if (currentsec > 0) {
+            var final = then - date;
+            var dd = Math.floor(final/ (1000 * 60 * 60 * 24));
+            var hh = Math.floor((final / (1000 * 60 * 60)) % 24);
+            var mm = Math.floor((final / 1000 / 60) % 60);
+            var ss = Math.floor((final / 1000) % 60);
+            document.getElementById("display").innerHTML = "Time Remaining: " + dd + "D     " + hh + "H " + mm + "M " + ss + "S";
+            document.getElementById("message").innerHTML = then;
+            if (final < 0) {
+              clearInterval(countdownTimer);
+              document.getElementById("message").innerHTML = "Expired";
+            }
         //take one second away, and rerender the seconds split into d, h, m, and s in the html, which you will reuse next time timer() runs
     } else {
-        //expired
+        document.getElementById("display").innerHTML = " ";
+        document.getElementById("message").innerHTML = "Countdown Not Started";
     }
-}
-
-window.onload=function(){
-	var myInput=document.createElement("input");
-	myInput.setAttribute("type","text");
-	myInput.setAttribute("id","minutes");
-	
-	var myButton=document.createElement("input");
-	myButton.setAttribute("type","button");
-	myButton.setAttribute("value","Start Timer");
-	
-	myButton.onclick=function(){
-		startCounter();	
-		
-	}
-	document.getElementById("inputArea").appendChild(myInput);
-	document.getElementById("inputArea").appendChild(myButton);
 }
