@@ -1,22 +1,37 @@
-const timeH = document.querySelector('h1');
-let timeSecond = 20;
+var hours = 0;
+var minutes = 0;
+var seconds = 0;
+var interval = null;
 
-displayTime(timeSecond)
+document.getElementById('hours').addEventListener('change', e => {
+    hours = +e.target.value;
+});
 
-const countDown = setInterval (()=>{
-    timeSecond--;
-    displayTime(timeSecond);
-    if(timeSecond <= 0 || timeSecond < 1){
-        endTime();
-        clearInterval(countDown)
-    }
-},1000)
+document.getElementById('minutes').addEventListener('change', e => {
+    minutes = +e.target.value;
+});
 
-function displayTime(second){
-    const min = Math.floor(second / 60);
-    const sec = Math.floor(second % 60);
-    timeH.innerHTML = `${min<10 ? '0': ''}${min}:${sec<10 ? '0': ''}${sec}`
-}
-function endTime(){
-    timeH.innerHTML = "Your time is up!"
-}
+document.getElementById('seconds').addEventListener('change', e => {
+    seconds = +e.target.value;
+});
+
+document.getElementById('startTimer').addEventListener('click', () => {
+    var timeInSeconds = (hours * 60 * 60) +
+        (minutes * 60) +
+        seconds;
+
+    var displayTime = () => {
+        var displayHours = Math.floor(timeInSeconds / (60 * 60));
+        var remainder = timeInSeconds - (displayHours * 60 * 60);
+        var displayMinutes = Math.floor(remainder / 60);
+        var displaySeconds = remainder - (displayMinutes * 60);
+        document.getElementById("timer").innerHTML = displayHours + " : " + displayMinutes + " : " + displaySeconds;
+    };
+    interval = setInterval(() => {
+        displayTime();
+        timeInSeconds -= 1;
+        if (timeInSeconds < 0) {
+            clearInterval(interval);
+        }
+    }, 1000);
+});
