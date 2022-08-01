@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" >
+        <link rel="stylesheet" href="css/stles.css">
         <style>
             html {
              height: 500px;  
@@ -13,24 +19,16 @@
                 <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
             <body>
-                <main id="main">
-                    <div class="container">
-                        <div class="countdown-container">
-                            <h1 id="title">
-                                10 Minute Timer
-                            </h1>
-                            <span id="time">10:00</span>
-                        </div>
-                        <div class="function-buttons">
-                            <button class="reset-btn" id="btn-reset">
-                                Reset
-                            </button>
-                            <button class="start-btn" id="btn-start">
-                                Start
-                            </button>
-                        </div>
-                    </div>
-                </main>
-                <script src="timer.js"></script>
+                <div class="timer">
+                    <span class="timer__part timer__part--minutes">00</span>
+                    <span class="timer__part">:</span>
+                    <span class="timer__part timer__part--seconds">00</span>
+                    <button type="button" class="timer__btn timer__btn--control timer__btn--start">
+                        <span type="button" class="material-icons">play_arrow</span>
+                    </button>
+                    <button type="button" class="timer__btn timer__btn--reset">
+                        <span type="button" class="material-icons">timer</span>
+                    </button>
+                </div>
+                <script src="js/timer.js" type="module"></script>
             </body>
-        </html>

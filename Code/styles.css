@@ -1,5 +1,7 @@
 style
 body {
+background: aliceblue;
+margin: 24px;
   min-width: 1005px;
   max-width: 100%;
   position: relative;
@@ -13,4 +15,36 @@ body {
     align-items: center;
     padding: 20px;
     height: 100%;
+}
+
+.timer{
+    font-family: sans-serif;
+    display: inline-block;
+    padding: 24px 32px;
+    border-radius: 30px;
+    background: aliceblue;
+}
+
+.timer__part {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.timer_btn {
+    width: 50px;
+    height: 50px;
+    margin-left: 16px;
+    border-radius: 50%;
+    border: none;
+    color: white;
+    background: blueviolet;
+    cursor: pointer;
+}
+
+.timer__btn--start {
+    background: green;
+}
+
+.timer__btn--stop {
+    background: red;
 }
