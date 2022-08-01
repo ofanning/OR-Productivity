@@ -1,7 +1,7 @@
 style
 body {
-  min-width: 1005px; /* your desired width */
+  min-width: 1005px;
   max-width: 100%;
   position: relative;
-  vertical-align:middle;
+  vertical-align: middle;
 }
