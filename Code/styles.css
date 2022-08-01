@@ -17,34 +17,21 @@ margin: 24px;
     height: 100%;
 }
 
-.timer{
-    font-family: sans-serif;
-    display: inline-block;
-    padding: 24px 32px;
-    border-radius: 30px;
-    background: aliceblue;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
-.timer__part {
-    font-size: 36px;
-    font-weight: bold;
+section {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.timer_btn {
-    width: 50px;
-    height: 50px;
-    margin-left: 16px;
-    border-radius: 50%;
-    border: none;
-    color: white;
-    background: blueviolet;
-    cursor: pointer;
-}
-
-.timer__btn--start {
-    background: green;
-}
-
-.timer__btn--stop {
-    background: red;
+h1 {
+    font-family: 'Montserrat';
+    font-size: 90px;
 }
