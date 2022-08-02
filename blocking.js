@@ -1,13 +1,3 @@
-blcoker = function blocking (link) {
-    var current = window.location.href;
-    if (current.includes(link)) {
-        document.body.innerHTML = "";
-        document.body.innerHTML = "Blocked LOL";
-    }
-}
-
-blocker("youtube.com");
-
 /* https://www.youtube.com/watch?v=dIrXIJ781DQ */
 
 //let cb = document.querySelector('#blocked_button');
