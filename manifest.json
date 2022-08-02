@@ -4,6 +4,7 @@
     "description": "multifaceted productivity tool",
     "manifest_version": 3,
     "author": "Owen Fanning",
+    "author2": "Rocky Aguirre",
     "content_scripts": [
         {
             "matches": ["<all_urls>"],
@@ -20,6 +21,7 @@
     },
     "permissions": [
         "webRequest",
-        "webRequestBlocking"
+        "webRequestBlocking",
+        "storage"
     ]
 }
