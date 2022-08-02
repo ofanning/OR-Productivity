@@ -1,0 +1,60 @@
+style
+body {
+background: aliceblue;
+margin: 24px;
+  min-width: 1005px;
+  max-width: 100%;
+  position: relative;
+  vertical-align: middle;
+}
+
+.timer {
+    font-family: sans-serif;
+    display: inline-block;
+    padding: 24px 32px;
+    border-radius: 30px;
+    background:black;
+}
+
+.timer__part {
+    font-size: 80px;
+    font-weight: bold;
+}
+
+.timer__btn {
+    width: 90px;
+    height: 90px;
+    margin-left: 16px;
+    border-radius: 50%;
+    border: none;
+    color: white;
+    background: blue;
+    cursor: pointer;
+}
+
+.timer__btn--start {
+    background: green;
+
+}
+
+.timer__btn--stop {
+    background: red;
+
+}
+
+#main{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    height: 100%;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    height: 500px;  
+    width: 700px;   
+}
