@@ -1,13 +1,3 @@
-style
-body {
-background: aliceblue;
-margin: 24px;
-  min-width: 100px;
-  max-width: 100%;
-  position: relative;
-  vertical-align: middle;
-}
-
 .timer {
     font-family: sans-serif;
     display: inline-block;
