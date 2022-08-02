@@ -16,7 +16,8 @@
         "default_title": "OR Productivity"
     },
     "background": {
-        "service_worker": "blocking.js"
+        "service_worker": "Code/blocking.js"
+
     },
     "permissions": [
         "webRequest",
