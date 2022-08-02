@@ -13,11 +13,11 @@ margin: 24px;
     display: inline-block;
     padding: 24px 32px;
     border-radius: 30px;
-    background: white
+    background:black;
 }
 
 .timer__part {
-    font-size: 36 px;
+    font-size: 36px;
     font-weight: bold;
 }
 
