@@ -30,7 +30,7 @@ export default class timer {
             }
         });
 
-        updateInterfaceTime() {
+        updateInterfaceTime(); {
             const minutes = Math.floor(this.remainingSeconds / 60);
             const seconds = this.remainingSeconds % 60;
 
@@ -38,7 +38,7 @@ export default class timer {
             this.el.seconds.textContent = seconds.toString().padStart(2, "0");
         }
 
-        updateInterfaceControls() {
+        updateInterfaceControls(); {
             if (this.interval === null) {
                 this.el.control.innerHTML = `<span class="material-icons">play_arrow</span>`;
                 this.el.control.classList.add("timer__btn--start");
@@ -50,7 +50,7 @@ export default class timer {
             }
         }
 
-        start() {
+        start(); {
             if (this.remainingSeconds === 0) return;
 
             this.interval = setInterval(() => {
@@ -64,7 +64,7 @@ export default class timer {
         this.updateInterfaceControls();
     }
 
-    stop() {
+    stop(); {
         clearInterval(this.interval);
 
         this.interval = null;
