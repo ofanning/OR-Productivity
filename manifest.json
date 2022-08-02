@@ -7,7 +7,7 @@
     "content_scripts": [
         {
             "matches": ["<all_urls>"],
-            "js":["Code/blocking.js"]
+            "js":["blocking.js"]
         }
         
     ],
@@ -16,10 +16,11 @@
         "default_title": "OR Productivity"
     },
     "background": {
-        "service_worker": "Code/blocking.js"
+        "service_worker": "blocking.js"
     },
     "permissions": [
         "webRequest",
-        "webRequestBlocking"
+        "webRequestBlocking",
+        "storage"
     ]
 }
