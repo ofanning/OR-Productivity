@@ -1,84 +1,52 @@
-var min;
-var sec;
-var minTimer;
-var secTimer;
+var min = 0;
+var sec = 0;
+var startchr = 0;       // used to control when to read data from form
 
-$("button#submit").on("click", function () {
-    getValues();
-    console.log(min);
-    console.log(sec);
-});
+function countdownTimer() {
+  // https://coursesweb.net/javascript/
+  // if $startchr is 0, and form fields exists, gets data for minutes and seconds, and sets $startchr to 1
+  if(startchr == 0 && document.getElementById('mns') && document.getElementById('scs')) {
+    // makes sure the script uses integer numbers
+    min = parseInt(document.getElementById('mns').value) + 0;
+    sec = parseInt(document.getElementById('scs').value) * 1;
 
-$("button#reset").click(reset);
-$("button#start").click(secCountDown);
+    // if data not a number, sets the value to 0
+    if(isNaN(min)) min = 0;
+    if(isNaN(sec)) sec = 0;
 
-function getValues(){
-    min = $("#userMin").val();
-    sec = $("#userSec").val();
-}
-function disableStart() {
-    $("#start").prop("disabled", true);
-}
+    // rewrite data in form fields to be sure that the fields for minutes and seconds contain integer number
+    document.getElementById('mns').value = min;
+    document.getElementById('scs').value = sec;
+    startchr = 1;
+    document.getElementById('btnct').setAttribute('disabled', 'disabled');     // disable the button
+  }
 
-function enableStart() {
-    $("#start").prop("disabled", false);
-}
+  // if minutes and seconds are 0, sets $startchr to 0, and return false
+  if(min==0 && sec==0) {
+    startchr = 0;
+    document.getElementById('btnct').removeAttribute('disabled');     // remove "disabled" to enable the button
 
-function reset() {
-    clearInterval(secTimer);
-    enableStart();
-    getValues();
-    $("#min").text(min);
-    $("#sec").text(sec);
-    toggleDisplayClasses();
-}
+    /* HERE YOU CAN ADD TO EXECUTE A JavaScript FUNCTION WHEN COUNTDOWN TIMER REACH TO 0 */
 
-function toggleDisplayClasses() {
-    $("#countdown").toggleClass("background2middle");
-    $("#countdown").toggleClass("background1middle");
-    $("h1").toggleClass("whiteText");
-    $("h1").toggleClass("blackText");
-    $("h2").toggleClass("whiteText");
-    $("h2").toggleClass("blackText");
-    $("body").toggleClass("background1");
-    $("body").toggleClass("background2");
-}
+    return false;
+  }
+  else {
+    // decrease seconds, and decrease minutes if seconds reach to 0
+    sec--;
+    if(sec < 0) {
+      if(min > 0) {
+        sec = 59;
+        min--;
+      }
+      else {
+        sec = 0;
+        min = 0;
+      }
+    }
+  }
 
-//function restart() {
-//    stop();
-//    getValues();
-//    $("#min").text(min);
-//    $("#sec").text(sec);
-//    toggleDisplayClasses();
-//}
-
-//runs when you click "start"
-function secCountDown() {
-    disableStart();
-    getValues();
-    //display starting number
-    $("#min").text(min);
-    $("#sec").text(sec);
-    //count down and change number display
-    secTimer = setInterval(function () {
-        //if sec is > 0, then countdown
-        if (sec > 0 && min >= 0) {
-            sec--;
-            $("#sec").text(sec);
-        } else if(sec == 0 && min >= 0){
-            // if sec = 0, subtract 1 from min and restart sec to 59
-            //getValues();
-            sec = 59;
-            $("#sec").text(sec);
-            if (min > 0) {
-                min--;
-                $("#min").text(min);
-            } else {
-                getValues();
-                $("#min").text(min);
-                $("#sec").text(sec);
-                toggleDisplayClasses();
-            }
-        }
-    }, 1000);
+  // display the time in page, and auto-calls this function after 1 seccond
+  document.getElementById('showmns').innerHTML = min;
+  document.getElementById('showscs').innerHTML = sec;
+  setTimeout('countdownTimer()', 1000);
 }
