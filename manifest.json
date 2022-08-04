@@ -3,22 +3,21 @@
     "version": "1.0.0",
     "description": "multifaceted productivity tool",
     "manifest_version": 3,
-    "author": "Owen Fanning",
     
-    "action":{
-        "default_popup": "Code/layouts/index.html",
-        "default_title": "OR Productivity"
-    },
-    "content_scripts": [
-        {
-            "matches": ["<all_urls>"],
-            "js": ["block_content.js"]
-        }
-    ],
+    
     "background": {
-        "service_worker": "background.js"
+        "service_worker": "serviceWorker.js"
     },
+    "host_permissions": ["<all_urls>"],
     "permissions": [
+        "scripting",
         "storage"
-    ]
+    ],
+    "options_ui":{
+        "page": "opt.html",
+        "open_in_tab": true
+    },
+    "action": {
+        "default_popup": "timer.html"
+    }
 }
