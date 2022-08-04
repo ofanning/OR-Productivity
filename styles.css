@@ -5,40 +5,40 @@
     width: 700px;   
 }
 
-.timer {
-    font-family: sans-serif;
+  input {
     display: inline-block;
-    padding: 12px 16px;
-    border-radius: 10px;
-    background:white;
-}
-
-.timer__part {
-    font-size: 50px;
-    font-weight: bold;
-}
-
-.timer__btn {
-    width: 50px;
-    height: 50px;
-    margin-left: 16px;
-    border-radius: 50%;
-    border: none;
-    color: white;
-    background: lightpink;
-    cursor: pointer;
-}
-
-.timer__btn--start {
-    background: green;
-
-}
-
-.timer__btn--stop {
-    background: red;
-
-}
-
+    width: 25px;
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 4.5em;
+  }
+  
+  h2 {
+    font-size: 3em;
+    text-align: center;
+    padding: 75px;
+  }
+  
+  h2 span {
+    display: inline-block;
+    width: 30%;
+    height: 90px;
+    font-size: 2em;
+  }
+  
+  div#buttons {
+  /*   margin: 0 auto; */
+    text-align: center;
+    padding: 0 0 25px;
+  }
+  
+ div.userInput {
+    margin: 0 center;
+    text-align: center;
+    padding: 5px;
+  } 
 #main{
     position: relative;
     display: flex;
