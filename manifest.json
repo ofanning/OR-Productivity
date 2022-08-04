@@ -4,24 +4,22 @@
     "description": "multifaceted productivity tool",
     "manifest_version": 3,
     "author": "Owen Fanning",
-    "content_scripts": [
-        {
-            "matches": ["<all_urls>"],
-            "js":["blocking.js"]
-        }
-        
-    ],
+    
     "action":{
         "default_popup": "Code/layouts/index.html",
         "default_title": "OR Productivity"
     },
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["blocking.js"]
+        }
+    ],
     "background": {
-        "service_worker": "blocking.js"
+        "service_worker": "background.js"
 
     },
     "permissions": [
-        "webRequest",
-        "webRequestBlocking",
         "storage"
     ]
 }
