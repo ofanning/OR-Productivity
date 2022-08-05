@@ -6,7 +6,7 @@
 }
 
 html {
-    background-color: aliceblue;
+    background-color: white;
     height: 100%;
 }
 
@@ -15,7 +15,7 @@ html {
     width: 612.5px;
     background-color: aliceblue;
     margin: 0 auto;
-    border: 5px solid darkblue;
+    border: 5px solid cornflowerblue;
 
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -27,10 +27,6 @@ html {
     justify-self: center;
     align-self: center;
     font-size: 30px;
-}
-
-#hour {
-    grid-area: 1 / 2 / 1 / 3;
 }
 
 #main-label {
