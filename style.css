@@ -1,3 +1,6 @@
+* {
+    padding: 35px;
+}
 
 input[type=checkbox]{
 	height: 0;
