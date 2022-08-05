@@ -10,7 +10,7 @@ function buildSaveArray() {
     //so that they can be operated on with js
     let collection = document.getElementsByClassName('userUrl');
     for (let i = 0; i < elements.length; i++){
-        saveArray[i] = collection[i];
+        saveArray[i] = collection[i].value;
     }
 
     //call save_options with our newly minted array
@@ -56,7 +56,20 @@ function restoreUrls() {
     chrome.storage.sync.get({
         urlArray: []
 
-    }, function(items) {
-        buildOptDisplay(items.urlArray);
+    }, function(urlArray) {
+        //this is where I begin serious deviation from rusty video, could cause bug
+        //unload the stored urlArray into each of the text boxes? This is me guessing
+        //just testing reloading one url rn
+        restoreUrlsHelper(items.urlArray);
     });
 }
+
+function restoreUrlHelper(items) {
+    //this should eventually be a loop for all the urls
+    document.getElementById('url1').value = items[i];
+}
+
+
+
+document.addEventListener('DOMContentLoaded', restoreUrls);
+document.getElementById('save').addEventListener('click', buildSaveArray);
