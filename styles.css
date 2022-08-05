@@ -145,8 +145,10 @@ body {
 	position: relative;
 }
 
-header {
-    position: center;
-    font-size: 200px;
+.header {
+    padding: 30px;
+    text-align: center;
+    background: aliceblue;
     color: cornflowerblue;
-}
+    font-size: 100px;
+  }
