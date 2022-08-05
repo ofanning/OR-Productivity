@@ -9,7 +9,7 @@ var sec = document.getElementById('sec');
 
 // trying to keep popup window open so that timer stays on
 var popupWindow = window.open(
-    chrome.extension.getURL("normal_popup.html"),
+    chrome.extension.getURL("timer.html"),
     "exampleName",
     "width=400,height=400"
 );
