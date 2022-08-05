@@ -95,10 +95,10 @@ input[type=checkbox]{
 label {
 	cursor: pointer;
 	text-indent: -9999px;
+    width: 100px;
+	height: 50px;
 	background: grey;
 	display: block;
-    width: 50px;
-    height: 25px;
 	border-radius: 50px;
 	position: relative;
 }
@@ -132,5 +132,5 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 25vh;
+	height: 50vh;
 }
