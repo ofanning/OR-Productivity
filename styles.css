@@ -144,4 +144,5 @@ body {
 	display: block;
 	border-radius: 100px;
 	position: relative;
+    float: left;
 }
