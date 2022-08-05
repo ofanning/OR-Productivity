@@ -4,12 +4,99 @@
     height: 500px;  
     width: 700px;   
 }
+input {
+    padding: 10px;
+    font-size: small;
+}
 
-#main{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    height: 100%;
+html {
+    background-color: grey
+}
+
+#container {
+    height: 50px;
+    width: 175px;
+    background-color: aliceblue;
+    margin: 0 auto;
+    border: 5px solid darkblue;
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.label {
+    margin: 0;
+    justify-self: left;
+    align-self: left;
+    font-size: 15px;
+}
+
+#hour-label {
+    grid-area: 0.5 / 1 / 0.5 / 1.5;
+}
+
+#main-label {
+    grid-area: 0.5 / 1.5 / 0.5 / 2;
+}
+
+#sec-label {
+    grid-area: 0.5 / 2 / 0.5 / 2.5;
+}
+
+.time {
+    justify-self: left;
+    align-self: left;
+
+    border: none;
+    background-color: black;
+    font-size: 25px;
+    width: 35px;
+    height: 25px'
+}
+
+#hour {
+    grid-area: 1 / 1 / 1 / 1.5;
+}
+
+.semicolor {
+    justify-self: left;
+    align-self: left;
+
+    font-size: 15px;
+    margin: 0;
+}
+
+#p1 {
+    grid-area: 1 / 1 / 1 / 2;
+}
+
+#minute {
+    grid-area: 1 / 1.5 / 1 / 2;
+}
+
+#p2 {
+    grid-area: 1 / 1.5 / 1 / 2.5;
+}
+
+#sec {
+    grid-area: 1 / 2 / 1 / 2.5;
+}
+
+.btn {
+    align-self: left;
+
+    width: 50px;
+    height: 20px;
+
+    font-size: 15px;
+    justify-self: left;
+}
+
+#start {
+    grid-area: 1.5 / 1 / 1.5 / 2;
+}
+
+#reset {
+    grid-area: 1.5 / 1.5 / 1.5 / 2.5;
 }
