@@ -27,8 +27,8 @@ html {
 
 .label {
     margin: 0;
-    justify-self: left;
-    align-self: left;
+    justify-self: center;
+    align-self: center;
     font-size: 15px;
 }
 
@@ -45,8 +45,8 @@ html {
 }
 
 .time {
-    justify-self: left;
-    align-self: left;
+    justify-self: center;
+    align-self: center;
 
     border: none;
     background-color: black;
@@ -60,8 +60,8 @@ html {
 }
 
 .semicolon {
-    justify-self: left;
-    align-self: left;
+    justify-self: center;
+    align-self: center;
 
     font-size: 15px;
     margin: 0;
@@ -84,13 +84,13 @@ html {
 }
 
 .btn {
-    align-self: left;
+    align-self: center;
 
     width: 50px;
     height: 20px;
 
     font-size: 15px;
-    justify-self: left;
+    justify-self: center;
 }
 
 #start {
