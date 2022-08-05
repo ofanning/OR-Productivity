@@ -24,8 +24,7 @@ function timer(){
      } else if(hour.value != 0 && min.value == 0){
         min.value = 59;
         hour.value--;
-     } else if(hour.value == 0 && min.value == 0 && sec.value == 10)
-        alert("You have ten seconds left!");
+     }
      return;
 }
 
