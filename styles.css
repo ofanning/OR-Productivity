@@ -96,3 +96,10 @@ html {
 #reset {
     grid-area: 3 / 3 / 3 / 5;
 }
+
+h2 {
+    font-size: 25px;
+    padding: 15px;
+    color: cornflowerblue;
+    text-align: center;
+}
