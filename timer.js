@@ -49,16 +49,3 @@ reset.addEventListener('click', function(){
     sec.value = 0;
     stopTimer()
 })
-
-// store information
-chrome.storage.sync.set({"hour.value" : value}, function() {
-    
-})
-
-chrome.storage.sync.set({"min.value"  : value}, function() {
-    
-})
-
-chrome.storage.sync.set({"sec.value"  : value}, function() {
-    
-})
