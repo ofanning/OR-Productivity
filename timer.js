@@ -1,3 +1,5 @@
+
+// establish variable names
 var start = document.getElementById('start');
 var reset = document.getElementById('reset');
 
@@ -5,7 +7,7 @@ var hour = document.getElementById('hour');
 var min = document.getElementById('minute');
 var sec = document.getElementById('sec');
 
-//store reference to the variable
+// store reference to the variable
 var startTimer = null;
 
 function timer(){
@@ -30,7 +32,7 @@ function stopTimer(){
 }
 
 start.addEventListener('click', function(){
-    //initialize variable startTimer
+    // initialize variable startTimer
     function startInterval(){
         startTimer = setInterval(function(){
             timer();
@@ -39,6 +41,7 @@ start.addEventListener('click', function(){
     startInterval()
 })
 
+// reset time to 00:00:00
 reset.addEventListener('click', function(){
     hour.value = 0;
     min.value = 0;

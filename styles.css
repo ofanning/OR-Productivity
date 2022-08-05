@@ -6,7 +6,8 @@
 }
 
 html {
-    background-color: lightgrey
+    background-color: lightgrey;
+    height: 100%;
 }
 
 #container {
