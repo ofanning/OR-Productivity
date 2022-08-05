@@ -93,7 +93,7 @@ input[type=checkbox]{
 }
 
 label {
-	cursor: pointer;
+	cursor: crosshair;
 	text-indent: -9999px;
 	width: 100px;
 	height: 50px;
@@ -133,4 +133,14 @@ body {
 	justify-content: center;
 	align-items: center;
 	height: 100vh;
+}
+
+.btn {
+    cursor: crosshair;
+	width: 100px;
+	height: 50px;
+	background: grey;
+	display: block;
+	border-radius: 100px;
+	position: relative;
 }
