@@ -7,6 +7,14 @@ var hour = document.getElementById('hour');
 var min = document.getElementById('minute');
 var sec = document.getElementById('sec');
 
+// trying to keep popup window open so that timer stays on
+var popupWindow = window.open(
+    chrome.extension.getURL("normal_popup.html"),
+    "exampleName",
+    "width=400,height=400"
+);
+window.close();
+
 // store reference to the variable
 var startTimer = null;
 
