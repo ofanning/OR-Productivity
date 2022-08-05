@@ -1,31 +1,19 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
     <head>
-        <style>
-            html {
-             height: 500px;  
-             width: 700px;      
-           }
-        </style>
         <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Countdown Timer</title>
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link href="styles.css" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+        <title>Timer</title>
     </head>
     <body>
-        <div class="timer">
-            <!-- <span class="timer__part timer__part--minutes">00</span>
-            <span class="timer__part">:</span>
-            <span class="timer__part timer__part--seconds">00</span>
-            <button type="button" class="timer__btn timer__btn--control timer__btn--start">
-                <span class="material-icons">play_arrow</span>
-            </button>
-            <button type="button" class="timer__btn timer__btn--reset">
-                <span class="material-icons">timer</span>
-            </button> -->
-        </div>
-        <script src="main.js" type="module"></script>
+       <div id="container">
+        <p id="hour-label" class="label">Hours</p><p id="min-label" class="label">Minutes</p><p id="sec-label" class="label">Seconds</p>
+        <input id="hour" type="number" max="99" min="0" value="0" class="time"><p id="p1" class="semicolon">:</p><input id="minute" type="number" max="60" min="0" value="0" class="time"><p id="p2" class="semicolon">:</p><input id="sec" type="number" max="99" min="0" value="0" class="time">
+        <button id="start" class="btn">Start</button>
+        <button id="reset" class="btn">Reset</button>
+       </div>
+       <script src="timer.js"></script>
     </body>
 </html>
+    
