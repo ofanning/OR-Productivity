@@ -11,10 +11,10 @@ var startTimer = null;
 
 function timer(){
     // ensure values stay at 0 when user has not input time
-    if (hour.value == 0 && min.value == 0 && sec.value ==0){
-        hour.value = 0;
-        min.value = 0;
-        sec.value = 0;
+    if (hour.value == "-" && min.value == "-" && sec.value == "-"){
+        hour.value = "-";
+        min.value = "-";
+        sec.value = "-";
     // count down from whatever value to 0
      } else if(sec.value != 0){
         sec.value--;
@@ -25,8 +25,15 @@ function timer(){
         min.value = 59;
         hour.value--;
      }
-     return "Your time is up!";
+     return;
 }
+
+function alertFunction(){
+    if (hour.value == 0 && min.value == 0 && sec.value == 0)
+    return alert("Your time is up!");
+}
+
+
 
 function stopTimer(){
     clearInterval(startTimer);
