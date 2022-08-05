@@ -11,10 +11,12 @@ var sec = document.getElementById('sec');
 var startTimer = null;
 
 function timer(){
+    // ensure values stay at 0 when user has not input time
     if (hour.value == 0 && min.value == 0 && sec.value ==0){
         hour.value = 0;
         min.value = 0;
         sec.value = 0;
+    // count down from whatever value to 0
      } else if(sec.value != 0){
         sec.value--;
      } else if(min.value != 0 && sec.value == 0){
