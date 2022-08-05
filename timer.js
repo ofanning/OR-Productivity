@@ -29,7 +29,7 @@ function timer(){
 }
 
 function alertFunction(){
-    if (hour.value == 0 && min.value == 0 && sec.value == 0)
+    if (hour.value == 0 || min.value == 0 || sec.value == 0)
     return alert("Your time is up!");
 }
 
