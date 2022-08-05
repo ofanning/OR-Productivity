@@ -142,8 +142,7 @@ body {
 	background: cornflowerblue;
 	display: block;
 	border-radius: 100px;
-    padding: 30px;
-	position: absolute; bottom: 0;
+	position: relative;
 }
 
 .header {
