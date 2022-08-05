@@ -1,4 +1,3 @@
-
 // establish variable names
 var start = document.getElementById('start');
 var reset = document.getElementById('reset');
@@ -49,4 +48,17 @@ reset.addEventListener('click', function(){
     min.value = 0;
     sec.value = 0;
     stopTimer()
+})
+
+// store information
+chrome.storage.sync.set({"hour.value" : value}, function() {
+    
+})
+
+chrome.storage.sync.set({"min.value"  : value}, function() {
+    
+})
+
+chrome.storage.sync.set({"sec.value"  : value}, function() {
+    
 })
