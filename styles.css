@@ -41,16 +41,14 @@ html {
     grid-area: 2 / 2 / 2 / 3;
 }
 
-.semicolon {
+
+#p1 {
+    grid-area: 2 / 2 / 2 / 4;
     justify-self: center;
     align-self: center;
 
     font-size: 30px;
     margin: 0;
-}
-
-#p1 {
-    grid-area: 2 / 2 / 2 / 4;
 }
 
 #min-label {
@@ -59,6 +57,11 @@ html {
 
 #p2 {
     grid-area: 2 / 3 / 2 / 5;
+    justify-self: center;
+    align-self: center;
+
+    font-size: 30px;
+    margin: 0;
 }
 
 #sec {
