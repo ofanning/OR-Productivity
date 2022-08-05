@@ -8,14 +8,17 @@
     "background": {
         "service_worker": "serviceWorker.js"
     },
-    "host_permissions": ["<all_urls>"],
+    "host_permissions": [
+        "http://*/",
+        "https://*/"
+    ],
     "permissions": [
         "scripting",
         "storage"
     ],
     "options_ui":{
-        "page": "opt.html",
-        "open_in_tab": true
+        "page": "opt.html"
+        
     },
     "action": {
         "default_popup": "timer.html",
