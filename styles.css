@@ -14,8 +14,8 @@ html {
 }
 
 #container {
-    height: 50px;
-    width: 175px;
+    height: 200px;
+    width: 700px;
     background-color: aliceblue;
     margin: 0 auto;
     border: 5px solid darkblue;
