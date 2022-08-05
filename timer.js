@@ -25,7 +25,7 @@ function timer(){
         min.value = 59;
         hour.value--;
      }
-     return;
+     return "Your time is up!";
 }
 
 function stopTimer(){
@@ -44,8 +44,8 @@ start.addEventListener('click', function(){
 
 // reset time to 00:00:00
 reset.addEventListener('click', function(){
-    hour.value = 0;
-    min.value = 0;
-    sec.value = 0;
+    hour.value = "-";
+    min.value = "-";
+    sec.value = "-";
     stopTimer()
 })
