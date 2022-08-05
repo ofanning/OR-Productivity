@@ -4,18 +4,14 @@
     height: 500px;  
     width: 700px;   
 }
-input {
-    padding: 10px;
-    font-size: small;
-}
 
 html {
-    background-color: grey
+    background-color: lightgrey
 }
 
 #container {
-    height: 100px;
-    width: 350px;
+    height: 150px;
+    width: 612.5px;
     background-color: aliceblue;
     margin: 0 auto;
     border: 5px solid darkblue;
