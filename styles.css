@@ -33,15 +33,15 @@ html {
 }
 
 #hour-label {
-    grid-area: 0.5 / 1 / 0.5 / 1.5;
+    grid-area: 1 / 2 / 1 / 3;
 }
 
 #main-label {
-    grid-area: 0.5 / 1.5 / 0.5 / 2;
+    grid-area: 1 / 3 / 1 / 4;
 }
 
 #sec-label {
-    grid-area: 0.5 / 2 / 0.5 / 2.5;
+    grid-area: 1 / 4 / 1 / 3;
 }
 
 .time {
@@ -56,10 +56,10 @@ html {
 }
 
 #hour {
-    grid-area: 1 / 1 / 1 / 1.5;
+    grid-area: 2 / 2 / 2 / 3;
 }
 
-.semicolor {
+.semicolon {
     justify-self: left;
     align-self: left;
 
@@ -68,19 +68,19 @@ html {
 }
 
 #p1 {
-    grid-area: 1 / 1 / 1 / 2;
+    grid-area: 2 / 2 / 2 / 4;
 }
 
 #minute {
-    grid-area: 1 / 1.5 / 1 / 2;
+    grid-area: 2 / 3 / 2 / 4;
 }
 
 #p2 {
-    grid-area: 1 / 1.5 / 1 / 2.5;
+    grid-area: 2 / 3 / 2 / 5;
 }
 
 #sec {
-    grid-area: 1 / 2 / 1 / 2.5;
+    grid-area: 2 / 4 / 2 / 5;
 }
 
 .btn {
@@ -94,9 +94,9 @@ html {
 }
 
 #start {
-    grid-area: 1.5 / 1 / 1.5 / 2;
+    grid-area: 3 / 2 / 3 / 4;
 }
 
 #reset {
-    grid-area: 1.5 / 1.5 / 1.5 / 2.5;
+    grid-area: 3 / 3 / 3 / 5;
 }
