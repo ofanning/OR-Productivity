@@ -135,17 +135,3 @@ body {
 	height: 100vh;
 }
 
-.btn2 {
-    align-self: center;
-
-    width: 100px;
-    height: 40px;
-
-    font-size: 15px;
-    justify-self: center;
-    cursor: crosshair;
-	background: grey;
-	display: block;
-    border-radius: 100px;
-
-}
