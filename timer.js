@@ -48,4 +48,4 @@ reset.addEventListener('click', function(){
     min.value = 0;
     sec.value = 0;
     stopTimer()
-})
+});
