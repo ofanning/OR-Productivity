@@ -15,6 +15,7 @@
     ],
     "options_ui":{ 
         "page": "opt.html",
+        "js": "opt.js",
         "open_in_tab": true
     },
     "action": {
