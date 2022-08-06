@@ -4,22 +4,30 @@ console.log('*****************content script*******************');
 
 //get the stored urls and call block with them
 
-chrome.storage.sync.get({
-    urlArray: []
-}, function(items) {
+chrome.storage.sync.get(['saveArrayKey'], function(items) {
     //NEED TO FIGURE OUT HOW TO ALSO GET STORED DATA FOR TOGGLE BUTTON AND 
     //THEN ALSO PASS THAT INTO THE BLOCK() FUNCTION.
     console.log("storage");
-    block(items.urlArray);
+    
+    
+    console.log("value is currently " + items.saveArrayKey[0]);
+    block(items.saveArrayKey);
 });
 
 
 //
-function block(urlArray){
+function block(saveArrayKey){
     //if toggle turned on in stored data, then...
-    console.log("block");
-    for (let i = 0; i < urlArray.length; i++) {
-        blockHelper(urlArray[i]);
+    console.log("made it block functoin");
+    console.log((window.location.href).includes(saveArrayKey[0]));
+    
+    for (let i = 0; i < 5; i++) {
+         if((window.location.href).includes(saveArrayKey[i])) {
+            console.log("block " + saveArrayKey[i]);
+            document.body.innerHTML = "";
+            document.body.innerHTML = "Get back to work!!!";
+            break;
+         }
     }
     
     
@@ -44,8 +52,3 @@ function block(urlArray){
 
 }
 
-function blockHelper(obj) {
-    console.log("blockhelper");
-    console.log(obj);
-    console.log(obj.keyword);
-}
