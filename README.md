@@ -11,10 +11,11 @@ The three main features are the following:
 3. A page with helpful tips in general productivity. 
 
 Set Up:
+First you must download the respitory to your laptop. Next, open your chrome extensions page and click "Load Unpacked" and select "OR-Productivity" and upload it. The extension should now be a part of your browser until you remove it. We recommend pinning the extension so that you have easy access to all of the useful features.
 
 
 Usage:
-Once the user has downloaded the extension, they can decide how the want to customize their experience. We recommend by right-clicking to the options tab, and inputting which websites the user wants blocked. Next, check out the link on that same page that gives the user information on how they can implement small changes to better their productivity. If the user finds themselves needing a break, feel free to click on the extension and set a timer to ensure their quick break does not turn into a long distraction.
+Once the user has downloaded the extension, they can decide how the want to customize their experience. We recommend by right-clicking to the options tab, and inputting which websites the user wants blocked. Next, check out the "Tips" page that gives the user information on how they can implement small changes to better their productivity. If the user finds themselves needing a break, feel free to click on the "Timer" tab and set a timer to ensure their quick break does not turn into a long distraction.
 
 Acknowledgments:
 Owen Fanning came up with the original idea for a productivity project. From there, Rocky Aguirre and Owen worked together to bring this project to life. YouTuber Coding Train helped both Owen and Rocky understand different aspects of the coding languages to overall better the project.
