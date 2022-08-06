@@ -8,10 +8,12 @@ function buildSaveArray() {
 
     //get an HTMLcollection of the user urls then put them into an actual array
     //so that they can be operated on with js
-    let collection = document.getElementsByClassName('userUrl');
-    for (let i = 0; i < elements.length; i++){
-        saveArray[i] = collection[i].value;
-    }
+    saveArray[0] = document.getElementById('url1').value;
+    saveArray[1] = document.getElementById('url2').value;
+    saveArray[2] = document.getElementById('url3').value;
+    saveArray[3] = document.getElementById('url4').value;
+    saveArray[4] = document.getElementById('url5').value;
+
 
     //call save_options with our newly minted array
     saveUrls(saveArray)
@@ -31,7 +33,7 @@ function getToggleValue() {
 function saveURLS(saveArray) {
     //save the url array with the chrome storage api
     chrome.storage.sync.set({
-        urlArray: saveArray
+        saveArrayKey: saveArray
     }, function() {
         // this function will show the user that their options are saved
         let status = document.getElementById('status');
@@ -53,21 +55,14 @@ function saveURLS(saveArray) {
 
 //new function to restore all the user inputs each time the opt.html is opened
 function restoreUrls() {
-    chrome.storage.sync.get({
-        urlArray: []
-
-    }, function(urlArray) {
-        //this is where I begin serious deviation from rusty video, could cause bug
-        //unload the stored urlArray into each of the text boxes? This is me guessing
-        //just testing reloading one url rn
-        restoreUrlsHelper(items.urlArray);
+    chrome.storage.sync.get(['saveArrayKey'], function(urlArray) {
+        var urlInput = document.getElementsByClassName('userUrl');
+        for (let i = 0; i < 5; i++) {
+            urlInput[i].value = items.saveArrayKey[i];
+        }
     });
 }
 
-function restoreUrlHelper(items) {
-    //this should eventually be a loop for all the urls
-    document.getElementById('url1').value = items[i];
-}
 
 
 
