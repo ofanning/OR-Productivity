@@ -1,6 +1,5 @@
  
 //build an array or object of the stuff from the user we need to save
-//probably need the array for the user urls and then something else for the toggle button?
 
 function buildSaveArray() {
     //blank array that will be populated with user urls
@@ -30,7 +29,7 @@ function getToggleValue() {
 }
 
 //save the array/object using chrome.storage.sync.set or chrome.storage.local.set
-function saveURLS(saveArray) {
+function saveUrls(saveArray) {
     //save the url array with the chrome storage api
     chrome.storage.sync.set({
         saveArrayKey: saveArray
@@ -43,7 +42,12 @@ function saveURLS(saveArray) {
             status.textContent = '';
         }, 750);
     });
-    //might need to add part saving the toggle value, but I think probably not
+
+    //add part to also save the value of the toggle value
+    let toggle = getToggleValue();
+    chrome.storage.sync.set({
+        saveToggleKey: toggle
+    });
 } 
 
 
@@ -55,7 +59,8 @@ function saveURLS(saveArray) {
 
 //new function to restore all the user inputs each time the opt.html is opened
 function restoreUrls() {
-    chrome.storage.sync.get(['saveArrayKey'], function(urlArray) {
+    chrome.storage.sync.get(['saveArrayKey'], function(items) {
+        console.log(items.saveArrayKey[0]);
         var urlInput = document.getElementsByClassName('userUrl');
         for (let i = 0; i < 5; i++) {
             urlInput[i].value = items.saveArrayKey[i];
