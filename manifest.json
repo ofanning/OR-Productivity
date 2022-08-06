@@ -15,7 +15,7 @@
         "scripting",
         "storage"
     ],
-    "options_ui":{
+    "options_ui":{ 
         "page": "opt.html",
         "open_in_tab": true
               
