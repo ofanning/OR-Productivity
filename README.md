@@ -6,12 +6,12 @@ As two colleges students, the authors of OR Productivity understand how easy it 
 
 Features:
 The three main features are the following:
-1. A webpage that allows the user to block websites of your choice for as long as you desire.
+1. A page that allows the user to block websites of their choice for as long as they desire.
 2. A pop-up that allows the user to set a timer to ensure they stay on track.
-3. A webpage with helpful tips in general productivity. 
+3. A page with helpful tips in general productivity. 
 
 Set Up:
-Add this file to your chrome extension. 
+
 
 Usage:
 Once the user has downloaded the extension, they can decide how the want to customize their experience. We recommend by right-clicking to the options tab, and inputting which websites the user wants blocked. Next, check out the link on that same page that gives the user information on how they can implement small changes to better their productivity. If the user finds themselves needing a break, feel free to click on the extension and set a timer to ensure their quick break does not turn into a long distraction.
