@@ -29,7 +29,7 @@ function getToggleValue() {
 }
 
 //save the array/object using chrome.storage.sync.set or chrome.storage.local.set
-function saveURLS(saveArray) {
+function saveUrls(saveArray) {
     //save the url array with the chrome storage api
     chrome.storage.sync.set({
         saveArrayKey: saveArray
@@ -60,6 +60,7 @@ function saveURLS(saveArray) {
 //new function to restore all the user inputs each time the opt.html is opened
 function restoreUrls() {
     chrome.storage.sync.get(['saveArrayKey'], function(items) {
+        console.log(items.saveArrayKey[0]);
         var urlInput = document.getElementsByClassName('userUrl');
         for (let i = 0; i < 5; i++) {
             urlInput[i].value = items.saveArrayKey[i];
