@@ -57,12 +57,3 @@ body {
 	border-radius: 100px;
 	position: relative;
 }
-
-.header {
-    padding: 30px;
-    text-align: center;
-    position: absolute; top: 0;
-    background: aliceblue;
-    color: cornflowerblue;
-    font-size: 150px;
-  }
